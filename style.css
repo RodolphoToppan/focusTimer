@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-card-light: #E1E1E6;
+  --bg-card-light-selected: #02799D;
+  --font-color-light: #323238;
+  --font-color-contrast: #FFFFFF;
+
+  font-size: 62.5%;
+}
+ body {
+  font-size: 1.6rem;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: grid;
+  background-color: var(--font-color-contrast);
+  color: var(--font-color-light);
+
+  align-self: end;
+  justify-self: center;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition: scale 0.3s;
+}
+
+button:hover {
+  scale: 1.1;
+}
+
+button:disabled {
+  filter: opacity(0.7);
+  cursor: not-allowed;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.countdown {
+  display: grid;
+  justify-items: center;
+  gap: 1.7rem;
+}
+
+.timer {
+  display: flex;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.card {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 3.2rem;
+
+  width: 13.8rem;
+  height: 15.2rem;
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+  
+  cursor: pointer;
+
+  background-color: var(--bg-card-light);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  scale: 1.1;
+  background: #c8c8ca;
+}
+
+div.selected {
+  background-color: var(--bg-card-light-selected);
+  transition: all 0.3s;
+}
+
+div.selected:hover {
+  background: #00607e;
+}
+
+div.selected path {
+  fill: var(--font-color-contrast);
+}
